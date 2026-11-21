@@ -1,0 +1,12 @@
+<h2>Mes tâches</h2>
+
+<button (click)="addOnClick()">Ajouter une tâche</button>
+<button (click)="clear()">Tout vider</button>
+
+<p>{{ count() }} tâche(s)</p>
+
+<ul>
+  @for (t of tasks(); track t.id) {
+    <li>{{ t.title }}</li>
+  }
+</ul>
